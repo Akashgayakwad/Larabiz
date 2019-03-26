@@ -16,7 +16,7 @@ class CreateListingsTable extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->name('name');
+            $table->string('name');
             $table->string('address');
             $table->string('website');
             $table->string('email');

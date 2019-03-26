@@ -23,7 +23,7 @@ class ListingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('createlisting');
     }
 
     /**
@@ -34,7 +34,7 @@ class ListingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 123;
     }
 
     /**
