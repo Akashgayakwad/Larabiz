@@ -5,10 +5,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  Dashboard
-                  <span class="float-right">
-                    <a href="/listings/create" class="btn btn-success btn-xs">Add Listing</a>
-                  </span>
+                    <span class="h3">Dashboard</span>
+                    <a href="/listings/create" class="btn btn-success btn-xs float-right">Add Listing</a>
                 </div>
 
                 <div class="card-body">
@@ -23,23 +21,26 @@
                       <table class="table table-striped">
                         <tr>
                           <th>Company Name</th>
-                          <th>User Id</th>
+                          <!-- <th>User Id</th>
                           <th>Address</th>
                           <th>Website</th>
                           <th>Email</th>
                           <th>Phone</th>
-                          <th>Bio</th>
-                          <th></th>
+                          <th>Bio</th> -->
+                          <th>Edit</th>
+                          <th>Delete</th>
                         </tr>
                         @foreach($listings as $listing)
                           <tr>
                             <td>{{$listing->name}}</td>
-                            <td>{{$listing->user_id}}</td>
+                            <!-- <td>{{$listing->user_id}}</td>
                             <td>{{$listing->address}}</td>
                             <td><a href= "http://www.{{$listing->website}}">{{$listing->website}}<a></td>
                             <td>{{$listing->email}}</td>
                             <td>{{$listing->phone}}</td>
-                            <td>{{$listing->bio}}</td>
+                            <td>{{$listing->bio}}</td> -->
+                            <td><a href="/listings/{{$listing->id}}/edit" class="btn btn-info">Edit</a></td>
+                            <td></td>
                           </tr>
                         @endforeach
                       </table>

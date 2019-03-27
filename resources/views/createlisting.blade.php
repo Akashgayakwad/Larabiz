@@ -3,7 +3,10 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="card">
-              <div class="card-header">Create Listing</div>
+              <div class="card-header">
+                <span class="h3">Create Listing</span>
+                <a href="/dashboard" class="float-right btn btn-primary btn-xs">Go back</a>
+            </div>
 
               <div class="card-body">
                   @if (session('status'))
