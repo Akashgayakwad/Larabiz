@@ -40,7 +40,12 @@
                             <td>{{$listing->phone}}</td>
                             <td>{{$listing->bio}}</td> -->
                             <td><a href="/listings/{{$listing->id}}/edit" class="btn btn-info">Edit</a></td>
-                            <td></td>
+                            <td>
+                              {!! Form::open(['action' => ['ListingsController@destroy', $listing->id], 'method' => 'POST']) !!}
+                                 {{ Form::hidden('_method', 'DELETE')}}
+                                 {{ Form::bsSubmit('Delete',['class' => 'btn btn-danger'])}}
+                              {!! Form::close() !!}
+                            </td>
                           </tr>
                         @endforeach
                       </table>
